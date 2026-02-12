@@ -4,11 +4,13 @@ import random
 
 app = FastAPI()
 
-origins = ["*"]
+origins = [
+    "http://guess-game-frontend-zeta.vercel.app",
+]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
